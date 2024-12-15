@@ -19,7 +19,7 @@ public class Buyer : MonoBehaviour
 
     public void GetMat()
     {
-        if (_MoneyStorage.Money >= range * 5)
+        if (_MoneyStorage.Money >= range * 5 && Upgrader._isFabric == true)
         {
             _MoneyStorage.SpendMoney(range * 5);
             _MaterialStorage.AddMaterial(range);

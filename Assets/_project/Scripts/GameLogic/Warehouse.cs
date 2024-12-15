@@ -14,15 +14,15 @@ public class Warehouse : MonoBehaviour
         }
         if (collision.collider.tag == "BoxEnemy")
         {
-            _mStorage.AddFormal(10);
+            _mStorage.AddFormal(100);
         }
         if (collision.collider.tag == "MouseEnemy")
         {
-            _mStorage.AddFormal(10);
+            _mStorage.AddFormal(1000);
         }
         if (collision.collider.tag == "KittenEnemy")
         {
-            _mStorage.AddFormal(10);
+            _mStorage.AddFormal(10000);
         }
     }
 }

@@ -16,10 +16,12 @@ public class Upgrader : MonoBehaviour
     
     public MoneyStorage _mStorage;
     public MaterialStorage _matStorage;
+    public static bool _isFabric = false;
     
     private void Start()
     {
-        GettingObject.SetActive(false);    
+        if(GettingObject != null) GettingObject.SetActive(false);    
+        if(DeletingObject != null) DeletingObject.SetActive(true);
     }
 
     private void Update()
@@ -36,14 +38,7 @@ public class Upgrader : MonoBehaviour
             if (DeletingObject != null) DeletingObject.SetActive(false);
             if (_nextUpgrader != null) _nextUpgrader.SetActive(true);
             this.gameObject.SetActive(false);
+            _isFabric = true;
         }
     }
-    /*private void OnCollisionStay(Collision collision)
-    {
-        if (collision.collider.tag == "Player")
-        {
-            Debug.Log(1);
-            UpgradeLevel();
-        }
-    }*/
 }
