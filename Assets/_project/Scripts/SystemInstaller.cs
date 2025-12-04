@@ -31,15 +31,15 @@ public class SystemInstaller : MonoBehaviour
             {typeof(KittenFactory), new KittenFactory(_kitPrefab, _matKitten)},*/
         };
     }
-    public void BuyMaterial(int range)
+    public void BuyMaterial(int mat, int money)
     {
-        if (_MoneyStorage.Money >= range * 5)
+        if (_MoneyStorage.Money >= money)
         {
-            _mStorage.AddMaterial(range);
-            _MoneyStorage.SpendMoney(range * 5);
+            _mStorage.AddMaterial(mat);
+            _MoneyStorage.SpendMoney(money);
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionExit(Collision collision)
     {
         if (collision.transform.tag == "Upgrader")
         {

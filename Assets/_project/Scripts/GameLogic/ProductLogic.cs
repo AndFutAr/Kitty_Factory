@@ -11,7 +11,7 @@ public class ProductLogic : MonoBehaviour
 
     void Start()
     {
-        speed = 3;
+        speed = -3;
         _warehouse = GameObject.FindGameObjectWithTag("Warehouse");
     }
 

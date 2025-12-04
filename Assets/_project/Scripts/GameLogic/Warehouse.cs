@@ -10,19 +10,19 @@ public class Warehouse : MonoBehaviour
     {
         if (collision.collider.tag == "ClewEnemy")
         {
-            _mStorage.AddFormal(10);
+            _mStorage.AddFormal(30);
         }
         if (collision.collider.tag == "BoxEnemy")
         {
-            _mStorage.AddFormal(100);
+            _mStorage.AddFormal(50);
         }
         if (collision.collider.tag == "MouseEnemy")
         {
-            _mStorage.AddFormal(1000);
+            _mStorage.AddFormal(70);
         }
         if (collision.collider.tag == "KittenEnemy")
         {
-            _mStorage.AddFormal(10000);
+            _mStorage.AddFormal(90);
         }
     }
 }
